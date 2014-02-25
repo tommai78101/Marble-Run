@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:summary="Music and Sound settings"
+		android:title="Audio Settings">
+		<CheckBoxPreference android:key="musicCheckBox"
+			android:summaryOn="Toggle to turn off music." android:summaryOff="Toggle to turn on music."
+			android:title="Music" android:defaultValue="true" android:order="1"/>
+		<CheckBoxPreference android:key="soundCheckBox"
+			android:summaryOn="Toggle to turn off sounds." android:summaryOff="Toggle to turn on sounds."
+			android:title="Sounds" android:defaultValue="true" android:order="2"/>
+	</PreferenceCategory>
+	<PreferenceCategory android:summary="This hasn't been implemented. Sorry. :("
+		android:title="Cheats"></PreferenceCategory>
+	<Preference android:key="settings_back" android:title="Back" android:summary="Go back to Main Menu."/>
+
+</PreferenceScreen>

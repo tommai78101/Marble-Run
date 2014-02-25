@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    
+    <string name="app_name">Marble Run</string>
+    <string name="menuPlay">Play</string>
+    <string name="menuScore">High Score</string>
+    <string name="menuQuit">Quit</string>
+    <string name="score_id">Entry #</string>
+    <string name="score_name">Name</string>
+    <string name="score_points">Accumulated Score</string>
+    <string name="score_notice">Empty</string>
+    <string name="version">Alpha 0.6c</string>
+    <string name="description">Does nothing.</string>
+    <string name="score_back">Main Menu</string>
+    <string name="level_name">Level Selection</string>
+    <string name="score_delete">Clear</string>
+    <string name="menuSettings">Settings</string>
+    <string name="score_stage">Run Ended at Stage #</string>
+    <string name="pause_resume">Resume</string>
+    <string name="pause_restart">Restart</string>
+    <string name="pause_back">Level Selection</string>
+
+</resources>

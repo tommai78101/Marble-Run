@@ -1,0 +1,37 @@
+Bitmap Color Codes:
+
+INFO: In use with creating level designs in the assets/stage folders.
+
+Nothing									FFFFFF
+Tee										FF0000
+Marble									00FF00
+Hole									000000
+Void									404040
+Bumper									FF9E7A
+Connector								A8FF1E
+
+Border									FF00FF
+Border with Void						FFAAFF
+
+					<>					8563FF
+					v^					FF7580
+Pipe				<^					56FF9C
+					<v					D154FF
+					^>					FCFF60
+					v>					94FF7C
+					
+
+					<					3C706D
+					^					34124C
+Funnel				>					380B0D
+					v					30510F
+					
+					<					4E6587
+					^					443151
+Ramp				>					493F30
+					v					415B40
+					
+Yellow Coin								CCCC00
+Red Coin								CC0000
+Blue Coin								0000CC
+Green Coin								00CC00

@@ -1,0 +1,32 @@
+level 2, and I managed to escape the tubes with my marble without meaning to (and I wasn't 
+jumping)
+
+
+level 3: this level is laggy every now and then (I don't know if it's because there are 2 marbles 
+or what) I managed to get the pink marble "stuck" between like two pipes, kind of like this, in 
+between the two red pieces
+
+
+edit: I went back, the lag seems to be from it not clearing previous levels, if I force-close the 
+game and then go back to it, it gets better (temporarily)
+
+level 5 took me a few tries to jump across, but I did it - and then found no "target ball", so 
+when I sent my marble to the "end", I got a "Unfortunately, Marble run has stopped." crash that 
+took me back to the main screen
+
+
+level 6 - I give up, I can't beat this one
+
+
+level 7 - I missed 1 ball on the 2nd side, and it got "stuck" inside the black space
+
+
+level 8 - I like the "marble accelerators", but they are a bit rough on the "player-controlled" 
+marble, I would perhaps add a lag on the screen's movement and make the control marble move as the 
+others do when it hits them - also, this map is huge, and I get "lost", I have no idea how fast I 
+am moving, and sometimes the other marbles move WAYYY too fast for me to catch them (OK, that may 
+be my fault, as I had some fun shooting the other marbles)
+
+
+level 9 - easy, and it gives "unable to load level 10" at the end, thus sending me back to level 1
+(I think the main menu or level selector would be better)

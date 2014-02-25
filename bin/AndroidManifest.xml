@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="nttu.edu" android:versionCode="81" android:versionName="@string/version">
+
+	<uses-sdk android:minSdkVersion="10" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+
+	<application android:icon="@drawable/ic_launcher"
+		android:label="@string/app_name">
+		<activity android:name=".activities.PlayActivity"
+			android:label="Play" android:screenOrientation="reverseLandscape" android:launchMode="singleInstance">
+		</activity>
+		<activity android:name=".activities.NewLoadingActivity"
+			android:label="Loading" android:screenOrientation="reverseLandscape"></activity>
+		<activity android:screenOrientation="reverseLandscape"
+			android:name=".activities.MenuActivity" android:label="Marble Run" android:launchMode="singleInstance">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:label="Scoreboard"
+			android:screenOrientation="reverseLandscape" android:name=".activities.ScoreActivity" android:launchMode="singleInstance">
+		</activity>
+		<activity android:name=".activities.LevelSelectionActivity"
+			android:screenOrientation="reverseLandscape" android:label="Selection" android:launchMode="singleInstance"></activity>
+		<activity android:name=".activities.SettingsActivity" android:screenOrientation="reverseLandscape" android:label="Settings" android:launchMode="singleInstance"></activity>
+	</application>
+
+</manifest>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:background="@drawable/level_bg" android:orientation="vertical">
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="center"
+		android:gravity="center|center_horizontal|center_vertical"
+		android:text="@string/level_name" android:textColor="@color/invisible"
+		android:textSize="60dp" />
+
+	<GridView android:id="@+id/level_select" android:layout_width="fill_parent"
+		android:layout_height="0dp" android:layout_weight="1"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:columnWidth="90dp" android:gravity="center"
+		android:horizontalSpacing="0dp" android:numColumns="auto_fit"
+		android:stretchMode="spacingWidthUniform" android:verticalSpacing="0dp">
+
+	</GridView>
+	<Button android:id="@+id/level_back" android:layout_width="250dp"
+		android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+		android:text="@string/score_back" />
+</LinearLayout>

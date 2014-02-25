@@ -1,0 +1,35 @@
+Alpha 0.6c:
+
++ Added Accumulation Score.
++ Fixed Accumulation Score not adding points after obtaining Coins.
+
++ Fixed Scoring, again.
++ Changed the behavior of the AlertDialog when you lose. You can now save with/without retrying and leaving.
++ Fixed all "Accumulated" typos.
+
++ Added Settings button to Pause Menu in-game.
+
++ Cleaned code.
+
++ Changed the text color on the HUD to make it stand out a bit better.
+
++ Fixed Tutorial pop-up closing too fast if a player accidentally touched the screen.
+
++ Error in the Icon art. Shadow and Light aren't aligned correctly.
+
++ Changed to using ModPlayer library.
+
++ Fixed ModPlayer being loaded twice. 
+- Unable to understand how the main activity is being launched twice upon startup.
++ Replaced "marblerun" raw module file with a better one.
+
+TODO List:
+
+
+
+FUTURE implementations:
+
+Cheats!
+
+All TODO comments.
+Bugs need fixing.
