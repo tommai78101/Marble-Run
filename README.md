@@ -1,5 +1,5 @@
-# Marble Run - Accelerometer-based Android Game
----
+# Marble Run
+### Accelerometer-based Android Game
 
 ![](http://i.imgur.com/ITDYv.png "Demo picture of Marble Run")
 
