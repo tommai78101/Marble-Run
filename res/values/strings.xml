@@ -10,7 +10,7 @@
     <string name="score_name">Name</string>
     <string name="score_points">Accumulated Score</string>
     <string name="score_notice">Empty</string>
-    <string name="version">Alpha 0.6c</string>
+    <string name="version">Alpha 0.6d</string>
     <string name="description">Does nothing.</string>
     <string name="score_back">Main Menu</string>
     <string name="level_name">Level Selection</string>
