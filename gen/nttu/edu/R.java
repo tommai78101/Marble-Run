@@ -37,29 +37,29 @@ public final class R {
         public static final int s9=0x7f020014;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f080008;
-        public static final int entry1=0x7f08000e;
-        public static final int level_back=0x7f080001;
-        public static final int level_select=0x7f080000;
-        public static final int loadingBar=0x7f080016;
-        public static final int loadingImage=0x7f080002;
-        public static final int pause_back=0x7f080014;
-        public static final int pause_restart=0x7f080012;
-        public static final int pause_resume=0x7f080011;
-        public static final int pause_settings=0x7f080013;
-        public static final int playButton=0x7f080004;
-        public static final int quitButton=0x7f080007;
-        public static final int relative=0x7f080015;
-        public static final int scoreButton=0x7f080005;
-        public static final int score_back1=0x7f080010;
-        public static final int score_delete1=0x7f08000f;
-        public static final int score_scrollview=0x7f08000d;
-        public static final int settingsButton=0x7f080006;
-        public static final int textView1=0x7f080009;
-        public static final int textView2=0x7f08000a;
-        public static final int textView3=0x7f08000b;
-        public static final int textView4=0x7f08000c;
-        public static final int version=0x7f080003;
+        public static final int LinearLayout1=0x7f090008;
+        public static final int entry1=0x7f09000e;
+        public static final int level_back=0x7f090001;
+        public static final int level_select=0x7f090000;
+        public static final int loadingBar=0x7f090016;
+        public static final int loadingImage=0x7f090002;
+        public static final int pause_back=0x7f090014;
+        public static final int pause_restart=0x7f090012;
+        public static final int pause_resume=0x7f090011;
+        public static final int pause_settings=0x7f090013;
+        public static final int playButton=0x7f090004;
+        public static final int quitButton=0x7f090007;
+        public static final int relative=0x7f090015;
+        public static final int scoreButton=0x7f090005;
+        public static final int score_back1=0x7f090010;
+        public static final int score_delete1=0x7f09000f;
+        public static final int score_scrollview=0x7f09000d;
+        public static final int settingsButton=0x7f090006;
+        public static final int textView1=0x7f090009;
+        public static final int textView2=0x7f09000a;
+        public static final int textView3=0x7f09000b;
+        public static final int textView4=0x7f09000c;
+        public static final int version=0x7f090003;
     }
     public static final class layout {
         public static final int level_select=0x7f030000;
@@ -91,6 +91,34 @@ public final class R {
         public static final int score_points=0x7f070006;
         public static final int score_stage=0x7f07000e;
         public static final int version=0x7f070008;
+    }
+    public static final class style {
+        /** 
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
+
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    
+ API 11 theme customizations can go here. 
+
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    
+ API 14 theme customizations can go here. 
+         */
+        public static final int AppBaseTheme=0x7f080000;
+        /**  Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here. 
+         */
+        public static final int AppTheme=0x7f080001;
     }
     public static final class xml {
         public static final int preferences=0x7f040000;

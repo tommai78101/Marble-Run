@@ -2,6 +2,7 @@ package nttu.edu.activities;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -16,6 +17,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
 import nttu.edu.R;
 import nttu.edu.graphics.RenderView;
 import nttu.edu.handler.Accelero;
@@ -35,6 +37,7 @@ import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
@@ -167,7 +170,11 @@ public class PlayActivity extends Activity implements Runnable, DialogInterface.
 		
 		FileInputStream in;
 		try {
-			in = this.openFileInput("format.dat");
+			//in = this.openFileInput("format.dat");
+			Log.d("Format()", this.getFilesDir().getPath());
+			File directory = new File(this.getFilesDir().getPath());
+			directory.mkdirs();
+			in = new FileInputStream(new File(directory, "format.dat"));
 			ObjectInputStream inn = new ObjectInputStream(new BufferedInputStream(in));
 			format = (Format) inn.readObject();
 			inn.close();
@@ -559,7 +566,8 @@ public class PlayActivity extends Activity implements Runnable, DialogInterface.
 				for (Map.Entry<Integer, Long> entry : entries)
 					format.highScores.put(entry.getKey(), entry.getValue());
 			}
-			FileOutputStream out = this.openFileOutput("format.dat", Activity.MODE_PRIVATE);
+			//FileOutputStream out = this.openFileOutput("format.dat", Activity.MODE_PRIVATE);
+			FileOutputStream out = new FileOutputStream(new File(Environment.getExternalStorageDirectory() + "/" + "format.dat"));
 			ObjectOutputStream output = new ObjectOutputStream(new BufferedOutputStream(out));
 			output.writeObject(format);
 			output.close();
@@ -570,13 +578,13 @@ public class PlayActivity extends Activity implements Runnable, DialogInterface.
 		super.finish();
 	}
 	
-	@Override
-	public void onAttachedToWindow() {
-		Window window = this.getWindow();
-		window.setType(WindowManager.LayoutParams.TYPE_KEYGUARD);
-		window.setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
-		super.onAttachedToWindow();
-	}
+//	@Override
+//	public void onAttachedToWindow() {
+//		Window window = this.getWindow();
+//		window.setType(WindowManager.LayoutParams.TYPE_KEYGUARD);
+//		window.setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
+//		super.onAttachedToWindow();
+//	}
 	
 	@Override
 	public void onDestroy() {

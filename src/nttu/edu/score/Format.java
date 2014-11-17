@@ -1,8 +1,10 @@
 package nttu.edu.score;
 
 import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.OptionalDataException;
@@ -12,6 +14,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
 import android.content.Context;
 import android.util.Log;
 
@@ -24,6 +27,23 @@ public class Format implements Serializable {
 	public Map<String, Integer> profiles;
 	public Map<AbstractMap.SimpleEntry<String, Integer>, Long> entries;
 	
+	public Format() {
+		try {
+			Log.d("Format()", "Creating new file, 'format.dat'. ");
+			File directory = new File("/data/data/nttu.edu/files");
+			if (directory.exists()) {
+				FileOutputStream out = new FileOutputStream(new File(directory, "format.dat"));
+				out.close();
+			}
+		}
+		catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public void addEntry(String player, long points) {
 		Format format = new Format();
 		sessions.add(format);
@@ -31,7 +51,7 @@ public class Format implements Serializable {
 	}
 	
 	public void addBestEntry(int stageNumber, long score) {
-		//If true, the values has been changed. If false, we do nothing.
+		// If true, the values has been changed. If false, we do nothing.
 		if (highScores == null)
 			highScores = new LinkedHashMap<Integer, Long>();
 		Integer compare = Integer.valueOf(stageNumber);
@@ -75,13 +95,15 @@ public class Format implements Serializable {
 	}
 	
 	public static Format loadFormat(Context context) {
-		FileInputStream in;
-		Format format;
+		FileInputStream in = null;
+		ObjectInputStream inn = null;
+		Format format = null;
 		try {
 			in = context.openFileInput("format.dat");
-			ObjectInputStream inn = new ObjectInputStream(new BufferedInputStream(in));
-			format = (Format) inn.readObject();
-			inn.close();
+			inn = new ObjectInputStream(new BufferedInputStream(in));
+			if (inn != null){
+				format = (Format) inn.readObject();
+			}
 		}
 		catch (FileNotFoundException e) {
 			Log.e("PlayActivity", "FileNotFoundException", e);
@@ -98,6 +120,27 @@ public class Format implements Serializable {
 		catch (IOException e) {
 			Log.e("PlayActivity", "IOException", e);
 			format = new Format();
+		}
+		finally {
+			if (in != null) {
+				try {
+					in.close();
+				}
+				catch (IOException e) {
+					Log.e("PlayActivity", "IOException", e);
+				}
+			}
+			if (inn != null) {
+				try {
+					inn.close();
+				}
+				catch (IOException e) {
+					Log.e("PlayActivity", "IOException", e);
+				}
+			}
+			if (format ==  null){
+				format = new Format();
+			}
 		}
 		return format;
 	}
